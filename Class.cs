@@ -250,7 +250,7 @@ namespace app
                 case "Середній":
                     file_path = @"../../Questions/middle.txt";
                     break;
-                case "Важкий":
+                case "Складний":
                     file_path = @"../../Questions/difficult.txt";
                     break;
             }
