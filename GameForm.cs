@@ -84,12 +84,12 @@ namespace app
 
             if (wheelIsMoved && GameWheel.WheelTime > 0)
             {
-                GameWheel.circule.kat += GameWheel.WheelTime / 10;
-                GameWheel.circule.kat = GameWheel.circule.kat % 360;
-                RotateImage(pictureBox1, GameWheel.circule.obrazek, GameWheel.circule.kat);
+                GameWheel.circule.angle += GameWheel.WheelTime / 10;
+                GameWheel.circule.angle = GameWheel.circule.angle % 360;
+                RotateImage(pictureBox1, GameWheel.circule.wheelImg, GameWheel.circule.angle);
                 GameWheel.WheelTime--;
             }
-            GameWheel.circule.stan = Convert.ToInt32(Math.Ceiling(GameWheel.circule.kat / 18));
+            GameWheel.circule.stan = Convert.ToInt32(Math.Ceiling(GameWheel.circule.angle / 18));
             if (GameWheel.circule.stan == 0)
             {
                 GameWheel.circule.stan = 0;
@@ -98,7 +98,7 @@ namespace app
             {
                 GameWheel.circule.stan -= 1;
             }
-            labelScoreInt.Text = GameWheel.circule.wartosciStanu[GameWheel.circule.stan].ToString();
+            labelScoreInt.Text = GameWheel.circule.cost[GameWheel.circule.stan].ToString();
             if (GameWheel.WheelTime == 0)
             {
                 GameWheel.Points = int.Parse(labelScoreInt.Text);

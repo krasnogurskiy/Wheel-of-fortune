@@ -12,18 +12,18 @@ namespace app
 {
     public class Kolo
     {
-        public Bitmap obrazek;
-        public Bitmap tempObrazek;
-        public float kat;
-        public int[] wartosciStanu;
+        public Bitmap wheelImg;
+        public Bitmap tempWheelImg;
+        public float angle;
+        public int[] cost;
         public int stan;
 
         public Kolo()
         {
-            tempObrazek = new Bitmap(Properties.Resources.kolo);
-            obrazek = new Bitmap(Properties.Resources.kolo);
-            wartosciStanu = new int[] { 425, 225, 375, -1, 25, 275, 400, 325, 100, 0, 200, 50, 350, 3000, 175, 475, 300, 125, 75, 500 };
-            kat = 0.0f;
+            tempWheelImg = new Bitmap(Properties.Resources.kolo);
+            wheelImg = new Bitmap(Properties.Resources.kolo);
+            cost = new int[] { 425, 225, 375, -1, 25, 275, 400, 325, 100, 0, 200, 50, 350, 3000, 175, 475, 300, 125, 75, 500 };
+            angle = 0.0f;
         }
 
     }
